@@ -11,14 +11,33 @@ import javax.persistence.*;
 public class Time {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NOME")
     private String nome;
 
-    @OneToOne(mappedBy = "TB_TIME",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    private Classificacao classificacao;
+    @Column(name = "PONTOS")
+    private Integer pontos;
+
+    @Column(name = "PARTIDAS_JOGADAS")
+    private Integer partidasJogadas;
+
+    @Column(name = "VITORIAS")
+    private Integer vitorias;
+
+    @Column(name = "EMPATES")
+    private Integer empates;
+
+    @Column(name = "DERROTAS")
+    private Integer derrotas;
+
+    @Column(name = "GOLS_PRO")
+    private Integer golsPro;
+
+    @Column(name = "GOLS_CONTRA")
+    private Integer golsContra;
+
+    @Column(name = "SALDO_GOLS")
+    private Integer saldoDeGols;
 }

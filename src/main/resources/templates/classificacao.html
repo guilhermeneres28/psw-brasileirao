@@ -36,6 +36,39 @@
     <section>
 
         <div class="container container-table">
+
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm">-->
+                            <!--<p class="display-4" style="text-align: center">Tabela Brasileirão: </p>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm">-->
+                            <!--<select class="custom-select">-->
+                                <!--<option value="2000">2000</option>-->
+                                <!--<option value="2001">2001</option>-->
+                                <!--<option value="2002">2002</option>-->
+                                <!--<option value="2003">2003</option>-->
+                                <!--<option value="2004">2004</option>-->
+                                <!--<option value="2005">2005</option>-->
+                                <!--<option value="2006">2006</option>-->
+                                <!--<option value="2007">2007</option>-->
+                                <!--<option value="2008">2008</option>-->
+                                <!--<option value="2009">2009</option>-->
+                                <!--<option value="2010">2010</option>-->
+                                <!--<option value="2011">2011</option>-->
+                                <!--<option value="2012">2012</option>-->
+                                <!--<option value="2013">2013</option>-->
+                                <!--<option value="2014">2014</option>-->
+                                <!--<option value="2015">2015</option>-->
+                                <!--<option value="2016">2016</option>-->
+                                <!--<option value="2017">2017</option>-->
+                                <!--<option value="2018">2018</option>-->
+                                <!--<option value="2019">2019</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
                 <!-- Tabela de colocação -->
                 <table class="table table-hover table-bordered alinhar-centro">
                     <thead>
@@ -52,49 +85,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Flamengo</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Vasco</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Fluminense</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Cruzeiro</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
+                        <tr th:each="time: ${times}">
+                            <td th:text="${time.getNome()}" />
+                            <td th:text="${time.getPontos()}" />
+                            <td th:text="${time.getPartidasJogadas()}" />
+                            <td th:text="${time.getVitorias()}" />
+                            <td th:text="${time.getEmpates()}" />
+                            <td th:text="${time.getDerrotas()}" />
+                            <td th:text="${time.getGolsPro()}" />
+                            <td th:text="${time.getGolsContra()}" />
+                            <td th:text="${time.getSaldoDeGols()}" />
                         </tr>
                     </tbody>
                 </table>
