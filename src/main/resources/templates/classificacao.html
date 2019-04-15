@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Projeto de PSW</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link href="../static/css/site.css" rel="stylesheet" th:href="@{/css/site.css}">
+</head>
+<body>
+
+    <header>
+        <!-- Barra de navegação da aplicação-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/}">Tabela Brasileirão</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/classificacao}">Classificação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Novo Time</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Simular Rodada</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+        <!-- Fim da barra de navegação -->
+    </header>
+
+    <section>
+
+        <div class="container container-table">
+                <!-- Tabela de colocação -->
+                <table class="table table-hover table-bordered alinhar-centro">
+                    <thead>
+                        <tr style="background-color: #10502f; color: #FFFFFF">
+                            <th scope="col">Clube</th>
+                            <th scope="col">Pts</th>
+                            <th scope="col">PJ</th>
+                            <th scope="col">VIT</th>
+                            <th scope="col">E</th>
+                            <th scope="col">D</th>
+                            <th scope="col">GP</th>
+                            <th scope="col">GC</th>
+                            <th scope="col">SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flamengo</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Vasco</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Fluminense</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Cruzeiro</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    <footer>
+        <!-- inicio do rodapé -->
+        <div class="footer-copyright text-center py-3">© 2019 Desenvolvido por:
+            <a href="https://www.linkedin.com/in/guilherme-neres/"> Guilherme Neres</a>
+            <a>e</a>
+            <a href="https://www.linkedin.com/in/rafael-lins-frade-de-arag%C3%A3o-378668159/">Rafael Frade</a>
+        </div>
+        <!-- Fim do rodape -->s
+    </footer>
+</body>
+</html>
