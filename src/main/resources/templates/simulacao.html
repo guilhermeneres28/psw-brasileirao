@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Projeto de PSW</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link href="../static/css/site.css" rel="stylesheet" th:href="@{/css/site.css}">
+</head>
+<body>
+
+<header>
+    <!-- Barra de navegação da aplicação-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" th:href="@{/}">Tabela Brasileirão</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/classificacao}">Classificação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Novo Time</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/rodada}">Simular Rodada</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Fim da barra de navegação -->
+</header>
+
+<section>
+    <h1 class="title-simulacao">Selecione os times para simular uma rodada</h1>
+
+    <div class="container-simulacao">
+
+        <div class="primeiro-time">
+
+            <div class="">
+                <div class="card" style="width: 18rem;">
+                    <img th:src="${}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <select id="primeiroTime" class="custom-select">
+                    <option value="">Selecione um time</option>
+                    <option th:each="time : ${times}" th:text="${time.nome}" th:value="${time.id}"></option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="versus-title">X</h1>
+        </div>
+
+
+        <div class="segundo-time">
+            <div class=" ">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <select id="segundoTime" class="custom-select">
+                    <option value="">Selecione um time</option>
+                    <option th:each="time : ${times}" th:text="${time.nome}" th:value="${time.id}"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <!-- inicio do rodapé -->
+    <div class="footer-copyright text-center py-3">© 2019 Desenvolvido por:
+        <a href="https://www.linkedin.com/in/guilherme-neres/"> Guilherme Neres</a>
+        <a>e</a>
+        <a href="https://www.linkedin.com/in/rafael-lins-frade-de-arag%C3%A3o-378668159/">Rafael Frade</a>
+    </div>
+    <!-- Fim do rodape -->s
+</footer>
+</body>
+</html>

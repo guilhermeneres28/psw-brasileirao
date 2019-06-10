@@ -14,3 +14,26 @@
 .container-table {
     margin-top: 40px;
 }
+
+.title-simulacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-simulacao {
+    display: flex;
+    width: 87%;
+    justify-content: space-between;
+}
+
+.primeiro-time {
+    margin-left: 12%;
+}
+
+.segundo-time {
+    margin-left: 2%;
+}
+
+.versus-title {
+    font-size: 100px;
+}

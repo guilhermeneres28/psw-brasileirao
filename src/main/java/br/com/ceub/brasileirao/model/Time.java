@@ -40,4 +40,7 @@ public class Time {
 
     @Column(name = "SALDO_GOLS")
     private Integer saldoDeGols;
+
+    @Column(name = "IMAGEM_TIME")
+    private String imagem;
 }
